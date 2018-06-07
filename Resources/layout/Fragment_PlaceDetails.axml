@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Fragment_PlaceDetails_Root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/Fragment_PlaceDetails_AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/Fragment_PlaceDetails_ActionBarToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textAlignment="center"
+                app:layout_scrollFlags="scroll|enterAlways" />
+        </android.support.design.widget.AppBarLayout>
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/Fragment_PlaceDetails_ContainerScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="90dp">
+                <ImageView
+                    android:id="@+id/Fragment_PlaceDetails_PhotoImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/Fragment_PlaceDetails_AdresTextView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_below="@id/Fragment_PlaceDetails_PhotoImageView"
+                    android:textSize="16sp"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:id="@+id/Fragment_PlaceDetails_DistanceTextView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/Fragment_PlaceDetails_AdresTextView"
+                    android:layout_marginLeft="13dp" />
+                <TextView
+                    android:id="@+id/Fragment_PlaceDetails_OpenTextView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/Fragment_PlaceDetails_DistanceTextView"
+                    android:layout_marginLeft="13dp" />
+                <ImageView
+                    android:id="@+id/Fragment_PlaceDetails_MapSearchButton"
+                    android:layout_height="64dp"
+                    android:layout_width="147dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_below="@id/Fragment_PlaceDetails_OpenTextView"
+                    android:background="@drawable/maps"
+                    android:textAlignment="center" />
+                <ImageView
+                    android:id="@+id/Fragment_PlaceDetails_UberButton"
+                    android:layout_height="70dp"
+                    android:layout_width="160dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_below="@id/Fragment_PlaceDetails_OpenTextView"
+                    android:background="@drawable/uber_button" />
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/Fragment_PlaceDetails_CallFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_action_call"
+        app:backgroundTint="#74d600" />
+</android.support.design.widget.CoordinatorLayout>
